@@ -59,9 +59,9 @@ class DiversityFilter(ABC):
         self.device = device
         self.prior_model_file_path = prior_model_file_path
         self.learning_rate = learning_rate
-        
+
         penalty_class = getattr(penalties, f"{penalty_function}Penalty")
-        
+
         self.penalty = penalty_class(self.scaffold_memory)  # Ensure the penalty class is loaded
 
         logger.info(f"Using penalty function: {self.penalty.__class__.__name__}")

@@ -3,9 +3,7 @@ from typing import Optional, List, Tuple
 
 import numpy as np
 
-
 from .diversity_filter import DiversityFilter
-
 
 class IdenticalMurckoScaffold(DiversityFilter):
     """Penalizes compounds based on exact Murcko Scaffolds previously generated."""
