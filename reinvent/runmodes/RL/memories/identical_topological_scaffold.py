@@ -12,7 +12,7 @@ class IdenticalTopologicalScaffold(DiversityFilter):
 
     def update_score(
         self, scores: np.ndarray, smilies: List[str], mask: np.ndarray, dummy
-    ) -> Tuple[List | None, np.ndarray]:
+    ) -> Tuple[List, np.ndarray]:
         """Compute the score"""
 
         scaffolds, original_scores, _ = self.score_scaffolds(

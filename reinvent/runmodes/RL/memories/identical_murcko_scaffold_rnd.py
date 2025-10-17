@@ -69,9 +69,9 @@ class IdenticalMurckoScaffoldRND(DiversityFilter):
         smilies: List[str],
         mask: np.ndarray,
         sampled: SampleBatch,
-    ) -> Tuple[List | None, np.ndarray]:
+    ) -> Tuple[List, np.ndarray]:
         """Compute the score and add intrinsic rewards based on RND."""
-        
+
         assert len(smilies) == len(
             sampled.items2
         ), f"Length of smilies ({len(smilies)}) and sampled.items2 ({len(sampled.items2)}) must be the same"

@@ -5,12 +5,13 @@ import numpy as np
 
 from .diversity_filter import DiversityFilter
 
+
 class IdenticalMurckoScaffold(DiversityFilter):
     """Penalizes compounds based on exact Murcko Scaffolds previously generated."""
 
     def update_score(
         self, scores: np.ndarray, smilies: List[str], mask: np.ndarray, dummy
-    ) -> Tuple[List | None, np.ndarray]:
+    ) -> Tuple[List, np.ndarray]:
         """Compute the score"""
 
         scaffolds, original_scores, _ = self.score_scaffolds(
