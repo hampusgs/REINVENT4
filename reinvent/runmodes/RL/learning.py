@@ -236,11 +236,11 @@ class Learning(ABC):
 
         # NOTE: only Reinvent has inception at the moment, would need the
         #       SMILES
-        # TODO: integrate original scores into inception
         return self.reward_nlls(
             agent_nlls,
             prior_nlls,
             results.total_scores,
+            results.original_scores,
             self.inception,
             results.smilies,
             self._state.agent,
@@ -263,6 +263,7 @@ class Learning(ABC):
             agent_nlls,
             prior_nlls,
             results.total_scores,
+            results.original_scores,
             self.inception,
             results.smilies,
             self._state.agent,
